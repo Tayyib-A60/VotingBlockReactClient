@@ -94,7 +94,7 @@ export default class LoginPage extends Component {
         event.preventDefault();
         await this.setState({ name: $('#name').val(), email: $('#email').val(), password: $('#password').val() });
         console.log(this.state.name, this.state.email, this.state.password);
-        axios.post('https://votingblockapi.herokuapp.com/api/voting/user/register', { UserName: this.state.name, UserEmail: this.state.email, Password: this.state.password})
+        axios.post('http://votingblockapi.herokuapp.com/api/voting/user/register', { UserName: this.state.name, UserEmail: this.state.email, Password: this.state.password})
         .then((res) => {
             this.setState({ user: res.data });
             notify.show('Sign up was successful', 'success', 20000);

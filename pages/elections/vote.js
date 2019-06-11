@@ -165,7 +165,7 @@ class Vote extends Component {
         this.props.candidates.forEach(candidate => {
             results.push({candidateName: candidate[1], voteCount: parseInt(candidate[2])});
         });
-        axios.post(`https://votingblockapi.herokuapp.com/api/voting/user/sendResults`, results).then((res) => {
+        axios.post(`http://votingblockapi.herokuapp.com/api/voting/user/sendResults`, results).then((res) => {
             notify.show('Election results has been sent to your email', 'success', 20000);
         }, (err) => {
             notify.show(err.message, 'error', 20000);
