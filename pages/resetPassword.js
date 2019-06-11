@@ -115,7 +115,7 @@ class ResetPassword extends Component {
             userEmail: this.props.user.nameid,
             password: this.state.password
         };
-        axios.put(`http://votingblockapi.herokuapp.com/api/voting/user/${this.props.user.primarysid}`, user)
+        axios.put(`https://votingblockapi.herokuapp.com/api/voting/user/${this.props.user.primarysid}`, user)
         .then((res) => {
             notify.show('User parameters updated', 'success', 20000);
             Router.pushRoute('/login');

@@ -11,7 +11,7 @@ class AuthService extends Component {
     }
 
     static login(email, password) {
-       return axios.post('http://votingblockapi.herokuapp.com/api/voting/user/authenticate', { UserEmail: email, Password: password});
+       return axios.post('https://votingblockapi.herokuapp.com/api/voting/user/authenticate', { UserEmail: email, Password: password});
     }
     static isAuthenticated() {
         const isNode = typeof module !== 'undefined'
@@ -20,10 +20,10 @@ class AuthService extends Component {
         }
     }
     static forgotPassword(user) {
-        return axios.post('http://votingblockapi.herokuapp.com/api/voting/user/forgotPassword', user);
+        return axios.post('https://votingblockapi.herokuapp.com/api/voting/user/forgotPassword', user);
     }
     static getUserByEmail(email) {
-        return axios.get(`http://votingblockapi.herokuapp.com/api/voting/user/${email}`);
+        return axios.get(`https://votingblockapi.herokuapp.com/api/voting/user/${email}`);
     }
     static logout() {
         // event.preventDefault();
@@ -36,7 +36,7 @@ class AuthService extends Component {
         }
     }
     static contactUs(contactUs) {
-        return axios.post(`http://votingblockapi.herokuapp.com/api/voting/user/contactUs`, contactUs);
+        return axios.post(`https://votingblockapi.herokuapp.com/api/voting/user/contactUs`, contactUs);
     }
 
 
