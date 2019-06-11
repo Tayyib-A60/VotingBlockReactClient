@@ -97,7 +97,7 @@ class CreateElection extends Component {
     }
 
     createElectionInDb (electionAddress) {
-           axios.post('http://localhost:5000/api/voting/election/create', { ElectionAddress: electionAddress, UserId: this.state.currentUser.id })
+           axios.post('https://votingblockapi.herokuapp.com/api/voting/election/create', { ElectionAddress: electionAddress, UserId: this.state.currentUser.id })
             .then((res) => {
                 console.log(res.data);
                 console.log('Election Created');

@@ -96,7 +96,7 @@ class Elections extends Component {
     static async getInitialProps(props) {
         let dbElections = [];
         const userId = props.query.id;
-        await axios.get(`http://localhost:5000/api/voting/election/getAll/${userId}`)
+        await axios.get(`https://votingblockapi.herokuapp.com/api/voting/election/getAll/${userId}`)
         .then((res) => {
             dbElections = res.data;
         });
