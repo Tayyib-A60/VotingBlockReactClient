@@ -6,6 +6,9 @@
   "directories": {
     "test": "test"
   },
+  "engines": {
+    "node": "10.3.0"
+  },
   "scripts": {
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js"
